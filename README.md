@@ -1,5 +1,5 @@
 # redigo-ring
-A simple distributed redigo client implement with hash ring, inspired by [go-redis](https://github.com/go-redis/redis/blob/master/ring.go).
+A simple distributed [redigo](https://github.com/garyburd/redigo) client implement with hash ring, inspired by [go-redis](https://github.com/go-redis/redis/blob/master/ring.go).
 
 ## example
 ```
