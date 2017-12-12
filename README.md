@@ -3,7 +3,7 @@ A simple distributed [redigo](https://github.com/garyburd/redigo) client impleme
 
 ## example
 ```
-ring := redix.NewRing(&redix.RingOptions{
+ring := rediring.NewRing(&redix.RingOptions{
     Addrs: []string{"127.0.0.1:6379", "127.0.0.1:6380"},
 })
 conn := ring.Pick(key).Get()
