@@ -1,4 +1,4 @@
-package rediring
+package ring
 
 import (
 	"fmt"
