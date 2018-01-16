@@ -177,6 +177,13 @@ func (r *Ring) getRedisPool(node string) *redis.Pool {
 				log.Printf("redis.Dial node(%s) failed", node)
 				return nil, err
 			}
+			if len(r.opt.Password) > 0 {
+				_, err = c.Do("AUTH", r.opt.Password)
+				if err != nil {
+					log.Printf("redis.Auth node(%s) failed", node)
+					return nil, err
+				}
+			}
 			return c, err
 		},
 		TestOnBorrow: func(c redis.Conn, t time.Time) error {
